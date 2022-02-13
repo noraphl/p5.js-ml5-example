@@ -5,7 +5,7 @@
 
 
 // Storing the label
-let label = "waiting...";
+let label = "listening...";
 
 // Classifier and model url
 let classifier;
@@ -40,13 +40,10 @@ function draw() {
   // Background noise is headphones
   let emoji = "🎧";
   // Pick an emoji based on label
-  switch (label) {
-    case "duck":
-      emoji = "🦆";
-    case "rainbow":
-      emoji = "🌈";
-    default:
-      emoji = "🎧";
+  if (label == "duck") {
+    emoji = "🦆";
+  } else if (label == "rainbow") {
+    emoji = "🌈";
   }
 
   // Draw the emoji
