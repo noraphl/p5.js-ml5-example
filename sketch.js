@@ -19,6 +19,12 @@ function preload() {
 function setup() {
   createCanvas(640, 520);
 
+  // Create an Audio input
+  mic = new p5.AudioIn();
+
+  // start the Audio Input.
+  // By default, it does not .connect() (to the computer speakers)
+  mic.start();
   // STEP 2: Start classifying (will listen to mic by default)
   classifyAudio();
 }
